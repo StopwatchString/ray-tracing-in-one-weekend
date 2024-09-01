@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="include\Pixel.h" />
     <ClInclude Include="include\PPMImage.h" />
+    <ClInclude Include="include\vec3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />

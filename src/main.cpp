@@ -1,22 +1,29 @@
 #include "PPMImage.h"
 #include "Pixel.h"
+#include "vec3.h"
 
 #include <vector>
 #include <iostream>
 #include <chrono>
 #include <numeric>
 
-const size_t width = 4000;
-const size_t height = 4000;
+
+const size_t imageWidth = 256;
+const size_t imageHeight = 256;
 const std::string filename = "image.ppm";
 
 int main()
 {
-    PPMImage<width, height>* image = new PPMImage<width, height>();
+    vec3<double> data(0.0, 1.1, 2.2);
+    vec3<double> data2(3.3, 4.4, 5.5);
+    
+    vec3<double> data3 = cross(data, data2);
 
-    for (size_t x = 0; x < width; ++x) {
-        for (size_t y = 0; y < height; ++y) {
-            image->setPixel(x, y, { 0, 0, 255, 0});
+    PPMImage<imageWidth, imageHeight>* image = new PPMImage<imageWidth, imageHeight>();
+
+    for (size_t x = 0; x < imageWidth; ++x) {
+        for (size_t y = 0; y < imageHeight; ++y) {
+            image->setPixel(x, y, { (uint8_t)x, 0, (uint8_t)y});
         }
     }
 
