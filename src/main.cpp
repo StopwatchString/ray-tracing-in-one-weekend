@@ -23,7 +23,9 @@ int main()
 
     for (size_t x = 0; x < imageWidth; ++x) {
         for (size_t y = 0; y < imageHeight; ++y) {
-            image->setPixel(x, y, { (uint8_t)x, 0, (uint8_t)y});
+            vec3<double> v{ (double)x, (double)y, 0.3 };
+            Pixel p{ v.x(), v.y(), v.z() };
+            image->setPixel(x, y, p);
         }
     }
 

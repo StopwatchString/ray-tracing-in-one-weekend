@@ -51,11 +51,6 @@ private:
     std::array<T, 3> data;
 };
 
-// operator/
-// dot product
-// cross product
-// unit vector
-
 template <typename T>
 inline std::ostream& operator<<(std::ostream& out, const vec3<T>& v) {
     return out << v.x() << " " << v.y() << " " << v.z();
@@ -101,8 +96,8 @@ inline double dot(const vec3<T>& u, const vec3<T>& v) {
 template <typename T>
 inline vec3<T> cross(const vec3<T>& u, const vec3<T>& v) {
     return vec3(u[1] * v[2] - u[2] * v[1],
-        u[2] * v[0] - u[0] * v[2],
-        u[0] * v[1] - u[1] * v[0]);
+                u[2] * v[0] - u[0] * v[2],
+                u[0] * v[1] - u[1] * v[0]);
 }
 
 template <typename T>
