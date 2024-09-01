@@ -18,12 +18,12 @@
     <ClInclude Include="include\PPMImage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Pixel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PPMImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
